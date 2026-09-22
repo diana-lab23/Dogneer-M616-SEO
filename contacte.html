@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacte – Dogneer</title>
+    <meta name="description" content="Contacta amb Dogneer, perruqueria canina a Sant Cugat del Vallès: horari, telèfon, Instagram, correu electrònic i adreça.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@500;600&family=Playwrite+US+Trad&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estils.css">
+</head>
+
+<body>
+    <!-- CONTENIDOR SUPERIOR FIXAT: LOGO i MENÚ DE NAVEGACIÓ -->
+    <header class="header">
+        <div class="contenidor-header">
+            <div class="nomNegoci">
+                <h1><a href="index.html">Dogneer</a></h1>
+            </div>
+
+            <nav class="menu" aria-label="Menú principal">
+                <a href="index.html">Inici</a>
+                <a href="serveis.html">Serveis</a>
+                <a href="cites.html">Cites</a>
+                <a href="contacte.html">Contacte</a>
+            </nav>
+
+            <select class="idioma-select" aria-label="Idioma" onchange="location.href = this.value">
+                <option value="contacte.html" selected>Català</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- CONTENIDOR MAIN -->
+    <main>
+        <section class="contingut-portada">
+            <div class="titol-portada">
+                <h1>Contacta amb <span class="nomNegoci">Dogneer</span></h1>
+            </div>
+        </section>
+
+        <section class="contenidor-contacte">
+            <div class="contacte-text">
+                <h2>Horari</h2>
+                <p>
+                    Dilluns a divendres - 9:30 a 18:00
+                    <br>
+                    Dissabtes i diumenges - tancat
+                </p>
+
+                <h2>Telèfon</h2>
+                <p class="enllac-contacte">
+                    <a href="tel:+34938082329">938 08 23 29</a>
+                </p>
+
+                <h2>Instagram</h2>
+                <p class="enllac-contacte">
+                    <a href="https://www.instagram.com/dogneer/" target="_blank" rel="noopener noreferrer">@dogneer</a>
+                </p>
+
+                <h2>Correu electrònic</h2>
+                <p class="enllac-contacte">
+                    <a href="mailto:dogneer@hotmail.com">dogneer@hotmail.com</a>
+                </p>        
+
+                <h2>Ens podeu visitar a </h2>
+                <p>
+                    C/ Plana de l'Hospital 32, <br>
+                    08173, Sant Cugat del Vallès <br>
+                    Barcelona
+                </p>
+            </div>
+
+            <div class="maps-caixa">
+                <iframe title="Mapa amb la ubicació de Dogneer a Sant Cugat del Vallès"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2989.3456430444717!2d2.0827142999999997!3d41.4751057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a497fbda780a37%3A0x5697f464347edf00!2sDogneer!5e0!3m2!1ses!2ses!4v1789842527109!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Dogneer · Perruqueria Canina · Sant Cugat del Vallès</p>
+    </footer>
+</body>
+
+</html>

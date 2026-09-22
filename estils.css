@@ -1,0 +1,597 @@
+/* =-=-=-=-=-=-=-=-=-=-= PALETA DE COLORS (treta del logo Dogneer) =-=-=-=-=-=-=-=-=-=-= */
+:root {
+    --blau-suau: #e8f0ff;
+    --blau-mig: #4a6fa5;
+    --blau-oscur: #2f4a73;
+    --blau-clar: #d6e8fe;
+
+    --rosa-suau: #fce4ec;
+    --lavanda: #e6e0ff;
+
+    --crema: #fff9f2;
+    --blanc: #ffffff;
+    --negre: #000000;
+
+    --gris-text: #333333;
+    --gris-suau: #f5f5f5;
+
+    --sombra-main: #e6e0ff;
+
+    --espai: 70px;   /* distància entre la vora del quadrat blau, el títol i el contingut */
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= BASE =-=-=-=-=-=-=-=-=-=-= */
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;   /* només a html: no cal repetir-ho al body (creava un contenidor de scroll extra) */
+}
+
+body {
+    margin: 0; /* treu el marge per defecte que té el body */
+    padding-top: 125px;   /* marge ajustat segons l'alçada del header (a mòbil es redefineix més avall) */
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Focus visible per a qui navega amb teclat */
+a:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--blau-oscur);
+    outline-offset: 3px;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= HEADER GENERAL =-=-=-=-=-=-=-=-=-=-= */
+.header {
+    background: linear-gradient(var(--blau-clar), var(--blau-suau));
+    padding: 20px 40px;   /* 20px a dalt i a baix / 40px a esquerra i dreta */
+    border-bottom: 3px solid var(--blau-mig);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;   /* el header es queda per sobre de la resta del contingut i no el tapa */
+}
+
+.contenidor-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;   /* tres columnes (esquerra, centre i dreta) */
+    align-items: center;
+}
+
+/* ~~~~~~~~~~ Nom del negoci ~~~~~~~~~~ */
+/* Es fa servir al logo del header (enllaç a l'inici) i dins dels títols <h1> de cada pàgina */
+.nomNegoci {
+    font-family: 'Playwrite US Trad';
+}
+
+.nomNegoci h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.nomNegoci a {
+    text-decoration: none;
+    color: var(--blau-mig);
+}
+
+/* ~~~~~~~~~~ Menú de navegació ~~~~~~~~~~ */
+.menu {
+    display: flex;
+    gap: 35px;
+    font-size: 25px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--blau-mig);
+    display: inline-block;   /* important: és necessari, si no scale no funciona!! */
+    transition: transform 0.3s ease, color 0.3s ease;   /* canvi suau de color i de mida */
+}
+
+.menu a:hover {
+    color: var(--blau-oscur);
+    transform: scale(1.20);   /* s'augmenta la mida un 20% */
+}
+
+/* ~~~~~~~~~~ Finestra canvi d'idioma ~~~~~~~~~~ */
+.idioma-select {
+    width: 120px;          /* mida fixa de la finestra */
+    justify-self: end;     /* alineada a la dreta */
+    padding: 6px 12px;
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    border-radius: 6px;
+    background: linear-gradient(var(--blau-suau), var(--blanc));
+    border: 3px solid var(--blau-mig);
+    color: var(--negre);
+    cursor: pointer;
+    box-sizing: border-box;   /* el width inclou padding i vora */
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= CONTENIDOR MAIN (PRINCIPAL) =-=-=-=-=-=-=-=-=-=-= */
+main {
+    padding: var(--espai) 20px;   /* a dalt i a baix: --espai / esquerra i dreta: 20px */
+    max-width: 75%;
+    margin: auto;
+    background-color: var(--blau-suau);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--blau-mig);
+}
+
+/* ~~~~~~~~~~ "Eslogan" ~~~~~~~~~~ */
+.contingut-portada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: var(--espai);   /* distància títol → text i logo */
+}
+
+.titol-portada {
+    font-family: 'Lora', serif;
+}
+
+.titol-portada h1 {
+    font-size: 70px;
+    margin: 0;
+    line-height: 1.2;   /* ajusta el buit que reserva la font */
+    color: var(--blau-oscur);
+    text-align: center;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= CONTENIDOR INFERIOR: inici (text + logo) i contacte (text + mapa) =-=-=-=-=-=-=-=-=-=-= */
+.intro-logo-contenidor,
+.contenidor-contacte {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;   /* centra el logo / mapa respecte al text en vertical */
+}
+
+/* ~~~~~~~~~~ Columna esquerra: text d'inici i de contacte (estils compartits) ~~~~~~~~~~ */
+.intro-text,
+.contacte-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.intro-text h2,
+.contacte-text h2 {
+    font-size: 28px;
+    color: var(--gris-text);
+    font-family: 'Lora', serif;
+    margin-top: 16px;   /* se suma al gap */
+    margin-bottom: 10px;
+}
+
+.intro-text p,
+.contacte-text p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--gris-text);
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+/* ~~~~~~~~~~ Inici: text justificat i separació entre paràgrafs amb marge ~~~~~~~~~~ */
+.intro-text p {
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+.intro-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ~~~~~~~~~~ Contacte: text centrat ~~~~~~~~~~ */
+.contacte-text {
+    text-align: center;
+}
+
+.enllac-contacte {
+    font-size: 17px;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+
+.enllac-contacte a {
+    text-decoration: none;
+    color: var(--blau-mig);
+    display: inline-block;   /* important: és necessari, si no scale no funciona!! */
+    transition: transform 0.3s ease, color 0.3s ease;   /* canvi suau de color i de mida */
+}
+
+.enllac-contacte a:hover,
+.enllac-contacte a:focus-visible {
+    color: var(--blau-oscur);
+    transform: scale(1.20);   /* s'augmenta la mida un 20% */
+}
+
+/* ~~~~~~~~~~ Columna dreta: logo ~~~~~~~~~~ */
+.logo-caixa {
+    flex: 1;
+    min-width: 0;
+}
+
+.logo-caixa img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 8px solid var(--blau-mig);
+    border-radius: 8px;
+}
+
+/* ~~~~~~~~~~ Columna dreta: google maps ~~~~~~~~~~ */
+.maps-caixa {
+    flex: 1;
+    min-width: 0;   /* evita que l'iframe (600px) desbordi la caixa */
+    box-sizing: border-box;
+    border: 8px solid var(--blau-mig);
+    border-radius: 8px;
+    overflow: hidden;   /* les cantonades de l'iframe respecten el border-radius */
+}
+
+.maps-caixa iframe {
+    display: block;   /* elimina el buit que deixa un element inline sota l'iframe */
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= PÀGINA DE SERVEIS =-=-=-=-=-=-=-=-=-=-= */
+/* ~~~~~~~~~~ Quadre factors del preu ~~~~~~~~~~ */
+.factors-preu {
+    box-sizing: border-box;
+    width: min(1200px, calc(100% - 40px));   /* mateixa amplada que la graella de targetes */
+    margin: 0 auto 50px;
+    padding: 26px 24px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--gris-text);
+    text-align: center;
+    background: var(--blanc);
+    border: 3px solid var(--blau-mig);
+    border-radius: 8px;
+}
+
+.factors-preu p {
+    margin: 0;
+}
+
+/* ~~~~~~~~~~ Llistats de targetes en 2 columnes (serveis i cites) ~~~~~~~~~~ */
+.serveis-llista,
+.cites-llista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));   /* minmax(0,…) evita que una targeta amplii la columna */
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.servei,
+.cita-targeta {
+    background: var(--blanc);
+    border: 3px solid var(--blau-mig);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.servei h2 {
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    color: var(--blau-oscur);
+    margin: 0 0 10px;
+}
+
+.servei p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--gris-text);
+    margin: 0;
+    text-align: justify;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= BOTÓ PER CONTACTAR (serveis i cites) =-=-=-=-=-=-=-=-=-=-= */
+.reserva-contacte,
+.cites-dubtes {
+    text-align: center;
+    margin-top: var(--espai);
+}
+
+.reserva-contacte p,
+.cites-dubtes p {
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    color: var(--blau-oscur);
+    margin: 0 0 16px;
+}
+
+.boto {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--blau-mig);
+    color: var(--blanc);
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.boto:hover,
+.boto:focus-visible {
+    background: var(--blau-oscur);
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= PÀGINA CITES =-=-=-=-=-=-=-=-=-=-= */
+
+/* ~~~~~~~~~~ Introducció + imatge gos ~~~~~~~~~~ */
+.cites-intro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto var(--espai);
+    padding: 0 20px;
+}
+
+.cites-intro p {
+    flex: 1;
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--gris-text);
+    text-align: justify;
+}
+
+.cites-intro img {
+    width: 240px;
+    height: auto;
+    box-sizing: border-box;
+    border: 8px solid var(--blau-mig);
+    border-radius: 8px;
+}
+
+/* ~~~~~~~~~~ Targetes d'informació ~~~~~~~~~~ */
+.cita-capcalera {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.cita-capcalera img {
+    width: 40px;
+    height: 40px;
+}
+
+.cita-capcalera h2 {
+    margin: 0;
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    color: var(--blau-oscur);
+}
+
+.cita-targeta p,
+.cita-targeta li {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--gris-text);
+}
+
+.cita-targeta p {
+    margin: 0 0 12px;
+}
+
+.cita-targeta ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.cita-targeta li {
+    margin-bottom: 10px;
+}
+
+.cita-targeta strong {
+    color: var(--blau-oscur);
+}
+
+/* ~~~~~~~~~~ informació important en targetes de cites ~~~~~~~~~~ */
+.cita-nota {
+    background: var(--blau-suau);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 0;
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=-=-=-=-= */
+.footer {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    text-align: center;
+    background: linear-gradient(var(--blau-clar), var(--blau-suau));
+    color: var(--blau-oscur);
+    margin-top: 20px;
+    padding: 25px;
+    min-height: 50px;
+    border-top: 3px solid var(--blau-mig);
+}
+
+/* =-=-=-=-=-=-=-=-=-=-= RESPONSIVE =-=-=-=-=-=-=-=-=-=-= */
+/* Un únic bloc per cada punt de tall, de més gran a més petit (així no es trepitgen entre ells) */
+
+/* ~~~~~~~~~~ Tablets ~~~~~~~~~~ */
+@media (max-width: 1024px) {
+    .header .nomNegoci {
+        font-size: 30px;
+    }
+
+    .menu {
+        font-size: 22px;
+        gap: 20px;
+    }
+
+    .titol-portada h1 {
+        font-size: 52px;
+    }
+
+    .intro-logo-contenidor,
+    .contenidor-contacte {
+        gap: 30px;
+    }
+
+    .intro-text h2,
+    .contacte-text h2 {
+        font-size: 26px;
+    }
+
+    .intro-text p,
+    .contacte-text p {
+        font-size: 16px;
+    }
+}
+
+/* ~~~~~~~~~~ Mòbils ~~~~~~~~~~ */
+@media (max-width: 768px) {
+
+    /* Header en dues files: logo + idioma a dalt, menú a sota */
+    body {
+        padding-top: 110px;
+    }
+
+    .header {
+        padding: 12px 16px;
+    }
+
+    .contenidor-header {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "logo idioma"
+            "menu menu";
+        row-gap: 8px;
+    }
+
+    .header .nomNegoci {
+        grid-area: logo;
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .idioma-select {
+        grid-area: idioma;
+        width: 100px;
+    }
+
+    .menu {
+        grid-area: menu;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 18px;
+        gap: 8px 15px;
+    }
+
+    /* ~~~~~~~~~~ Contingut ~~~~~~~~~~ */
+    main {
+        max-width: 92%;
+    }
+
+    .titol-portada h1 {
+        font-size: 36px;
+    }
+
+    .intro-logo-contenidor,
+    .contenidor-contacte {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .intro-text h2,
+    .contacte-text h2 {
+        font-size: 22px;
+    }
+
+    .intro-text p,
+    .contacte-text p {
+        font-size: 15px;
+    }
+
+    .intro-text p,
+    .servei p,
+    .cites-intro p {
+        text-align: left;
+    }
+
+    .maps-caixa iframe {
+        height: 300px;
+    }
+
+    /* Serveis */
+    .factors-preu {
+        width: 100%;
+    }
+
+    .factors-preu p {
+        font-size: 18px;
+    }
+
+    .serveis-llista,
+    .cites-llista {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .servei h2,
+    .cita-capcalera h2 {
+        font-size: 22px;
+    }
+
+    .servei p,
+    .cita-targeta p,
+    .cita-targeta li {
+        font-size: 15px;
+    }
+
+    /* ~~~~~~~~~~ Cites ~~~~~~~~~~ */
+    .cites-intro {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .cites-intro p {
+        font-size: 16px;
+    }
+
+    .cites-intro img {
+        width: 100%;
+        max-width: 240px;
+        align-self: center;
+    }
+
+    .reserva-contacte p,
+    .cites-dubtes p {
+        font-size: 18px;
+    }
+}
+
+/* ~~~~~~~~~~ Mòbils molt petits ~~~~~~~~~~ */
+@media (max-width: 400px) {
+    .header .nomNegoci {
+        font-size: 22px;
+    }
+
+    .menu {
+        font-size: 16px;
+        gap: 6px 12px;
+    }
+}

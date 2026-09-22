@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Serveis – Dogneer</title>
+    <meta name="description" content="Serveis de perruqueria canina a Dogneer: bany, tall segons raça, desllanat, stripping, hidratació i molt més.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@500;600&family=Playwrite+US+Trad&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estils.css">
+</head>
+
+<body>
+    <!-- CONTENIDOR SUPERIOR FIXAT: LOGO i MENÚ DE NAVEGACIÓ -->
+    <header class="header">
+        <div class="contenidor-header">
+            <div class="nomNegoci">
+                <h1><a href="index.html">Dogneer</a></h1>
+            </div>
+
+            <nav class="menu" aria-label="Menú principal">
+                <a href="index.html">Inici</a>
+                <a href="serveis.html">Serveis</a>
+                <a href="cites.html">Cites</a>
+                <a href="contacte.html">Contacte</a>
+            </nav>
+
+            <select class="idioma-select" aria-label="Idioma" onchange="location.href = this.value">
+                <option value="serveis.html" selected>Català</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- CONTENIDOR MAIN -->
+    <main>
+        <section class="contingut-portada">
+            <div class="titol-portada">
+                <h1>Els serveis de <span class="nomNegoci">Dogneer</span></h1>
+            </div>
+        </section>
+
+        <div class="factors-preu">
+            <p>
+                Els nostres serveis de perruqueria depenen de diferents factors:
+                raça, tamany, estat del gos en arribar, comportament, freqüència d'assistència,
+                atenció especialitzada a sèniors, tècnica de tall, temps de la sessió i la cosmètica
+                adicional utilitzada.
+            </p>
+        </div>
+
+        <section class="serveis-llista">
+            <!-- SERVEI BANY -->
+            <article class="servei">
+                <h2>Bany i assecat</h2>
+                <p>
+                    Un bany relaxant amb productes adaptats al tipus de pelatge i a la sensibilitat de la pell del
+                    teu gos, seguit d'un assecat suau perquè surti còmode i amb el pèl brillant.
+                </p>
+            </article>
+
+            <!-- SERVEI XAMPÚ COLOR -->
+            <article class="servei">
+                <h2>Xampú específic per color</h2>
+                <p>
+                    Utilitzem xampús pensats per al color del pelatge: blanquejant per a pèl blanc o
+                    clar, que neutralitza el to groguenc, i realçador per a pèl negre o fosc, que n'aviva
+                    el color i la lluentor. Aquest tractament es cobra com a suplement a partir de 3€.
+                </p>
+            </article>
+
+            <!-- SERVEI HIDRATACIÓ-->
+            <article class="servei">
+                <h2>Tractament d'hidratació</h2>
+                <p>
+                    Pèl més suau, brillant i fàcil de raspallar. Ideal per a pèl sec, apagat, espatllat, postvacacional,
+                    manteniment o per excés de platja. Els tractaments d'hidratació tenen un suplement a partir de 5€
+                    en funció del tamany del gos i el tipus de tractament que s'hagi de fer.
+                </p>
+            </article>
+
+            <!-- SERVEI ORELLES I UNGLES -->
+            <article class="servei">
+                <h2>Neteja d'orelles i tall d'ungles</h2>
+                <p>
+                    Cuidem els detalls que fan que el teu gos estigui net i a gust, com les orelles
+                    i les ungles, amb un tracte suau en tot moment i respectant sempre al seu ritme.
+                </p>
+            </article>
+
+            <!-- SERVEI RASPALL I DESENREDAT -->
+            <article class="servei">
+                <h2>Raspallat i desenredat</h2>
+                <p>
+                    Raspallem el pèl per eliminar el pèl mort i desfem els nusos amb cura, sense estirar.
+                    Si el pelatge està molt embullat, valorem amb tu l'opció que sigui millor per al benestar del gos.
+                    <br>
+                    En funció del treball, temps i quantitat de producte, es cobrarà un suplement mínim de 3€.
+                </p>
+            </article>
+
+            <!-- SERVEI TALL RAÇA-->
+            <article class="servei">
+                <h2>Tall segons raça</h2>
+                <p>
+                    Tallem el pèl segons l'estil propi de cada raça o, si ho prefereixes, com més t'agradi per al
+                    teu gos, sempre pensant en la seva comoditat.
+                </p>
+            </article>
+
+            <!-- SERVEI TALL MÁQUINA, TISORES I COMBINAT-->
+            <article class="servei">
+                <h2>Tall màquina, tisores o combinat</h2>
+                <p>
+                    Tallem el pèl com més t'agradi per al teu gos: tall cadell, tall d'estiu, més curt o més llarg,
+                    sempre pensant en la seva comoditat. <br>
+                    T'assessorem segons el tipus de pèl, l'activitat del gos i el manteniment que vulguis fer a casa.
+                </p>
+            </article>
+
+            <!-- SERVEI TALL HIGIÈNIC-->
+            <article class="servei">
+                <h2>Tall higiènic</h2>
+                <p>
+                    Retallem el pèl de les zones més delicades (sota la cua, la part íntima, la panxa i
+                    entre els coixinets de les potes) per mantenir-les netes, evitar nusos i facilitar la higiene
+                    diària.
+                </p>
+            </article>
+
+            <!-- SERVEI COSMÉTICA ADICIONAL -->
+            <article class="servei">
+                <h2>Cosmètica adicional</h2>
+                <p>
+                    Complementa el bany amb productes de cosmètica per al pelatge: bifàsic per hidratar i facilitar
+                    el raspallat, mascareta nutritiva per a pèl sec o apagat, i escuma per donar cos i lluentor.
+                </p>
+            </article>
+
+            <!-- SERVEI DESLLANAT-->
+            <article class="servei">
+                <h2>Desllanat</h2>
+                <p>
+                    Traiem el pèl mort i el subpèl per mantenir un pelatge sa, evitar nusos i reduir la quantitat de
+                    pèl que perd a casa. Depenent de l'estat i manteniment a casa, el desllanat serà nul, poc o molt. 
+                    Aquest servei es cobra a partir 5€ extra.
+                </p>
+            </article>
+
+            <!-- SERVEI STRIPPING-->
+            <article class="servei">
+                <h2>Stripping</h2>
+                <p>
+                    Retirem el pèl mort a mà sense fer malbé el seu pelatge. Aquesta tècnica és essencial en races
+                    de pelatge dur que no muden per si soles, com el Teckel, el Schnauzer, el Westy o el Jack Russell
+                    entre d'altres.
+                </p>
+            </article>
+        </section>
+
+        <section class="reserva-contacte">
+            <p>Vols reservar hora o tens alguna pregunta?</p>
+            <a class="boto" href="contacte.html">Contacta amb nosaltres</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Dogneer · Perruqueria Canina · Sant Cugat del Vallès</p>
+    </footer>
+
+</body>
+
+</html>
