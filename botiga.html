@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Botiga – Dogneer</title>
+    <meta name="description" content="Botiga Dogneer: collars, arnesos, corretges, roba, alimentació, llaminadures i joguines per al teu gos.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lora:wght@500;600&family=Playwrite+US+Trad&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="estils.css">
+</head>
+
+<body>
+    <!-- CONTENIDOR SUPERIOR FIXAT: LOGO i MENÚ DE NAVEGACIÓ -->
+    <header class="header">
+        <div class="contenidor-header">
+            <div class="nomNegoci">
+                <h1><a href="index.html">Dogneer</a></h1>
+            </div>
+
+            <nav class="menu" aria-label="Menú principal">
+                <a href="index.html">Inici</a>
+                <a href="serveis.html">Serveis</a>
+                <a href="botiga.html">Botiga</a>
+                <a href="cites.html">Cites</a>
+                <a href="contacte.html">Contacte</a>
+            </nav>
+
+            <select class="idioma-select" aria-label="Idioma" onchange="location.href = this.value">
+                <option value="botiga.html" selected>Català</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- CONTENIDOR MAIN -->
+    <main>
+        <section class="contingut-portada">
+            <div class="titol-portada">
+                <h1>La botiga de <span class="nomNegoci">Dogneer</span></h1>
+            </div>
+        </section>
+ 
+        <!-- Introducció -->
+        <section class="botiga-intro">
+            <p>
+                A la nostra tenda trobaràs tot el que el teu gos necessita: collars, arnesos, corretges, roba per als
+                dies de pluja o de fred, alimentació de qualitat, llaminadures i joguines. Treballem amb marques de
+                confiança perquè el teu pelut tingui sempre el millor.
+            </p>
+            <p>
+                Els preus són orientatius i poden variar segons la talla. Si busques alguna cosa en concret o vols
+                consultar disponibilitat, truca'ns o passa per la botiga.
+            </p>
+        </section>
+ 
+        <!-- Collars, arnesos i corretges -->
+        <section class="categoria-botiga">
+            <h2>Collars, arnesos i corretges</h2>
+            <div class="producte-llista">
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/collar-cuir.png" alt="Collar de cuir">
+                    <h3>Collar de cuir clàssic</h3>
+                    <p>Cuir natural, disponible en diverses mides i colors.</p>
+                    <span class="producte-preu">14,90 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/arnes_pecho.jpg" alt="Arnès ajustable">
+                    <h3>Arnès ajustable antiestrebades</h3>
+                    <p>Repartiment de la pressió al pit, ideal per a gossos que estiren.</p>
+                    <span class="producte-preu">22,50 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/collar-reflectant.png" alt="Collar reflectant">
+                    <h3>Collar reflectant</h3>
+                    <p>Major visibilitat per als passejos de nit o de matinada.</p>
+                    <span class="producte-preu">9,90 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/corretja-trenada.png" alt="Corretja de cuir trenada">
+                    <h3>Corretja trenada de cuir</h3>
+                    <p>Resistent i còmoda, amb un tacte suau a la mà.</p>
+                    <span class="producte-preu">18,00 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/corretja-extensible.png" alt="Corretja extensible">
+                    <h3>Corretja extensible</h3>
+                    <p>Fins a 5 metres de llibertat, amb frenada i bloqueig.</p>
+                    <span class="producte-preu">16,50 €</span>
+                </article>
+ 
+            </div>
+        </section>
+ 
+        <!-- Roba i impermeables -->
+        <section class="categoria-botiga">
+            <h2>Roba i impermeables</h2>
+            <div class="producte-llista">
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/impermeable.png" alt="Impermeable amb caputxa">
+                    <h3>Impermeable amb caputxa</h3>
+                    <p>Manté el pelatge sec els dies de pluja. Diverses talles.</p>
+                    <span class="producte-preu">24,90 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/jersei-llana.png" alt="Jersei de llana">
+                    <h3>Jersei de llana</h3>
+                    <p>Abriga en els dies freds sense limitar el moviment.</p>
+                    <span class="producte-preu">15,90 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/buff.png" alt="Buff protector de coll">
+                    <h3>Buff protector de coll</h3>
+                    <p>Protegeix del vent i complementa qualsevol passeig.</p>
+                    <span class="producte-preu">8,50 €</span>
+                </article>
+ 
+            </div>
+        </section>
+ 
+        <!-- Alimentació -->
+        <section class="categoria-botiga">
+            <h2>Alimentació</h2>
+            <div class="producte-llista">
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/pinso-cadells.png" alt="Pinso per a cadells">
+                    <h3>Pinso per a cadells</h3>
+                    <p>Formulat per al creixement, amb proteïna d'alta qualitat.</p>
+                    <span class="producte-preu">32,00 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/pinso-seniors.png" alt="Pinso per a gossos sèniors">
+                    <h3>Pinso per a gossos sèniors</h3>
+                    <p>Pensat per a articulacions i digestió sensible.</p>
+                    <span class="producte-preu">34,00 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/pinso-hipoalergenic.png" alt="Pinso hipoal·lergènic">
+                    <h3>Pinso hipoal·lergènic</h3>
+                    <p>Sense cereals, indicat per a pells i estómacs sensibles.</p>
+                    <span class="producte-preu">38,50 €</span>
+                </article>
+ 
+            </div>
+        </section>
+ 
+        <!-- Premis i llaminadures -->
+        <section class="categoria-botiga">
+            <h2>Premis i llaminadures</h2>
+            <div class="producte-llista">
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/ossets-dentals.png" alt="Ossets dentals naturals">
+                    <h3>Ossets dentals naturals</h3>
+                    <p>Ajuden a mantenir la higiene bucal mentre s'ho passa bé.</p>
+                    <span class="producte-preu">6,90 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/snacks-pollastre.png" alt="Snacks liofilitzats de pollastre">
+                    <h3>Snacks liofilitzats de pollastre</h3>
+                    <p>100 % carn, sense additius ni conservants.</p>
+                    <span class="producte-preu">7,50 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/galetes-casolanes.png" alt="Galetes casolanes sense cereals">
+                    <h3>Galetes casolanes sense cereals</h3>
+                    <p>Elaborades amb ingredients naturals, ideals per premiar.</p>
+                    <span class="producte-preu">5,90 €</span>
+                </article>
+ 
+            </div>
+        </section>
+ 
+        <!-- Joguines i accessoris -->
+        <section class="categoria-botiga">
+            <h2>Joguines i accessoris</h2>
+            <div class="producte-llista">
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/pilota-goma.png" alt="Pilota de goma resistent">
+                    <h3>Pilota de goma resistent</h3>
+                    <p>Ideal per jugar a buscar i per mossegar sense trencar-se.</p>
+                    <span class="producte-preu">5,50 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/corda-joc.png" alt="Corda de joc trenada">
+                    <h3>Corda de joc trenada</h3>
+                    <p>Perfecta per estirar i per netejar les dents mentre juga.</p>
+                    <span class="producte-preu">6,00 €</span>
+                </article>
+ 
+                <article class="producte">
+                    <img class="producte-img" src="img/botiga/llit-acolxat.png" alt="Llit acolxat">
+                    <h3>Llit acolxat</h3>
+                    <p>Coixí tou i rentable per al descans a casa.</p>
+                    <span class="producte-preu">39,90 €</span>
+                </article>
+ 
+            </div>
+        </section>
+ 
+        <!-- Nota sobre devolucions -->
+        <section class="botiga-nota">
+            <p>
+                Consulta les nostres condicions de canvis i devolucions a la pàgina de
+                <a href="cites.html">Cites</a>.
+            </p>
+        </section>
+ 
+        <!-- Crida a l'acció -->
+        <section class="reserva-contacte">
+            <p>No trobes el que busques o vols reservar un producte?</p>
+            <a class="boto" href="contacte.html">Contacta amb nosaltres</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Dogneer · Perruqueria Canina · Sant Cugat del Vallès</p>
+    </footer>
+
+</body>
+
+</html>
